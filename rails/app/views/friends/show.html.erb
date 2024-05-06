@@ -1,0 +1,19 @@
+<p style="color: green"><%= notice %></p>
+
+<%# <%= render @friend %> %>
+
+<div class="card">
+  <div class="card-header font-weight-bolder h3 text-primary">
+  <p>Personal Information</p>
+  </div>
+  <div class="card-body">
+    <div class="d-flex justify-content-between align-items-center">
+    <h5 class="card-title h4"><%= @friend.first_name %></h5>
+      <div>
+  <%= link_to "Edit this friend", edit_friend_path(@friend) %> |
+  <%= link_to "Back to friends", friends_path %>
+</div>
+    </div>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+  </div>
+</div>
