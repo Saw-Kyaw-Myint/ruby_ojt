@@ -2,7 +2,6 @@
   <% if friend.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(friend.errors.count, "error") %> prohibited this friend from being saved:</h2>
-
       <ul>
         <% friend.errors.each do |error| %>
           <li><%= error.full_message %></li>
@@ -10,33 +9,30 @@
       </ul>
     </div>
   <% end %>
-
-  <div>
+  <div class="form-gruop">
     <%= form.label :first_name, style: "display: block" %>
-    <%= form.text_field :first_name %>
+    <%= form.text_field :first_name, class: "form-control" %>
   </div>
-
-  <div>
+  <div class="form-group">
     <%= form.label :last_name, style: "display: block" %>
-    <%= form.text_field :last_name %>
+    <%= form.text_field :last_name, class: "form-control" %>
   </div>
-
-  <div>
+  <div class="form-group">
     <%= form.label :email, style: "display: block" %>
-    <%= form.text_field :email %>
+    <%= form.text_field :email, class: "form-control" %>
   </div>
-
-  <div>
+  <div class="form-group">
     <%= form.label :phone, style: "display: block" %>
-    <%= form.text_field :phone %>
+    <%= form.text_field :phone, class: "form-control" %>
   </div>
-
-  <div>
+  <div class="form-group">
     <%= form.label :twitter, style: "display: block" %>
-    <%= form.text_field :twitter %>
+    <%= form.text_field :twitter, class: "form-control" %>
   </div>
-
-  <div>
-    <%= form.submit %>
+  <div class="d-flex justify-content-between">
+    <div>
+      <%= link_to "Back to friends", friends_path,class:"btn btn-secondary" %>
+    </div>
+    <%= form.submit class: "btn btn-primary" %>
   </div>
 <% end %>
