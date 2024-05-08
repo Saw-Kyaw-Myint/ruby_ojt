@@ -1,17 +1,16 @@
-<% if friend.user==current_user  %>
+<% if true  %>
   <tr id="<%= dom_id friend %>">
     <td scope="row"><%= friend.id %></td>
-    <td><%= friend.first_name %></td>
-    <td><%= friend.last_name %></td>
+    <td><%= link_to (friend.first_name + " " + friend.last_name), friend,class:"link-opacity-10-hover" %></td>
     <td><%= friend.email %></td>
     <td><%= friend.phone %></td>
     <td><%= friend.twitter %></td>
     <td><%= friend.user_id %></td>
     <td class="d-flex">
-      <%= link_to "Show", friend, class:"btn btn-primary mr-2" %>
+      <%= link_to "Show", friend, class:"btn  btn-sm btn-primary mr-2" %>
       <% if friend.user==current_user %>
-        <%= link_to "Edit", edit_friend_path(friend),class:"btn btn-success mr-2" %>
-        <%= button_to "Destroy", friend, method: :delete, class: "btn btn-danger", data: { turbo_confirm: 'Are you sure?' } %>
+        <%= link_to "Edit", edit_friend_path(friend),class:"btn btn-sm btn-success mr-2" %>
+        <%= button_to "Destroy", friend, method: :delete, class: "btn btn-sm btn-danger", data: { turbo_confirm: 'Are you sure?' } %>
       <% end %>
       <td>
       </tr>
