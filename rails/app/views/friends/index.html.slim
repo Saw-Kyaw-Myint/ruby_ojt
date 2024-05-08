@@ -1,0 +1,16 @@
+p style="color: green" = notice
+h1 Friends
+= link_to "New friend", new_friend_path, class:'btn btn-secondary mb-2 float-right mr-5'
+.friends
+  table.table
+    thead
+      tr
+        th scope="col"  #
+        th scope="col" Name
+        th scope="col" Email
+        th scope="col" Phone
+        th scope="col" Twitter
+        th scope="col" User
+        th scope="col" Action
+    - @friends.each do |friend|
+      == render friend

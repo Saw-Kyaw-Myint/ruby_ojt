@@ -1,0 +1,13 @@
+- if true
+  tr id="#{dom_id friend}"
+    td scope="row" = friend.id
+    td = link_to (friend.first_name + " " + friend.last_name), friend,class:"link-opacity-10-hover"
+    td = friend.email
+    td = friend.phone
+    td = friend.twitter
+    td = friend.user_id
+    td.d-flex
+      = link_to "Show", friend, class:"btn  btn-sm btn-primary mr-2"
+      - if friend.user==current_user
+        = link_to "Edit", edit_friend_path(friend),class:"btn btn-sm btn-success mr-2"
+        = button_to "Destroy", friend, method: :delete, class: "btn btn-sm btn-danger", data: { turbo_confirm: 'Are you sure?' }
