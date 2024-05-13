@@ -1,0 +1,15 @@
+
+[1mFrom:[0m D:/ruby/rails/ruby_ojt/rails/spec/models/friend_spec.rb:20 :
+
+    [1;34m15[0m:     [32mend[0m
+    [1;34m16[0m: 
+    [1;34m17[0m:     it [31m[1;31m'[0m[31mshow friend[1;31m'[0m[31m[0m [32mdo[0m
+    [1;34m18[0m:       show_friend=[1;34;4mFriend[0m.find(@friend.id);
+    [1;34m19[0m:        binding.pry
+ => [1;34m20[0m:       expect(show_friend).to eq(@friend)
+    [1;34m21[0m:     [32mend[0m
+    [1;34m22[0m: 
+    [1;34m23[0m:     [1;34m# update[0m
+    [1;34m24[0m:     it [31m[1;31m'[0m[31mupdate the friend[1;31m'[0m[31m[0m [32mdo[0m
+    [1;34m25[0m:        @friend.update([35mfirst_name[0m:[31m[1;31m"[0m[31mmya mya[1;31m"[0m[31m[0m)
+
