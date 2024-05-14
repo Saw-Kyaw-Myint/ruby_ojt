@@ -1,22 +1,24 @@
 = form_with(model: friend) do |form|
-  - if friend.errors.any?
-    div style="color: red"
-      h2 = "#{pluralize(friend.errors.count, "error")} prohibited this friend from being saved"
-      ul
-        - friend.errors.each do |error|
-          li = error.full_message
   .form-group
     = form.label :first_name, style: "display: block"
     = form.text_field :first_name, class: "form-control"
+    - if(friend.errors[:first_name].any?)
+      p.text-danger = friend.errors[:first_name][0]
   .form-group
     = form.label :last_name, style: "display: block"
     = form.text_field :last_name, class: "form-control"
+    - if(friend.errors[:last_name].any?)
+      p.text-danger = friend.errors[:last_name][0]
   .form-group
     = form.label :email, style: "display: block"
     = form.text_field :email, class: "form-control"
+    - if(friend.errors[:email].any?)
+      p.text-danger = friend.errors[:email][0]
   .form-group
     = form.label :phone, style: "display: block"
     = form.text_field :phone, class: "form-control"
+    - if(friend.errors[:phone].any?)
+      p.text-danger = friend.errors[:phone][0]
   .form-group
     = form.label :twitter, style: "display: block"
     = form.text_field :twitter, class: "form-control"

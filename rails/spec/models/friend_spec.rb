@@ -5,7 +5,7 @@ RSpec.describe Friend, type: :model do
     before do
       user=User.new(email:"myint@gmail.com",password:"saw777dd")
       user.save
-      @friend =Friend.new(first_name:'saw kyaw',last_name:"myint",email:'saw@example.com',phone:'093939339',twitter:'afadfa',user_id:user.id)
+      @friend =Friend.new(first_name:'saw kyaw',last_name:"myint",email:'saw@example.com',phone:'09393933977',twitter:'afadfa',user_id:user.id)
       @friend.save
     end
 
